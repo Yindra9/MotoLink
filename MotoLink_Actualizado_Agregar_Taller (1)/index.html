@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MotoLink | Tu moto. Tu ruta. Siempre lista.</title>
+<meta name="description" content="Encuentra talleres especializados, compara opciones, reserva servicios y lleva el historial de tu motocicleta desde una sola plataforma." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{--red:#ff2d3f;--red2:#dc182b;--ink:#0d1117;--muted:#69707a;--line:#e8e9ed;--paper:#f7f8fa;--card:#fff;--shadow:0 18px 50px rgba(13,17,23,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff}a{text-decoration:none;color:inherit}button,input,select{font:inherit}.container{width:min(1180px,calc(100% - 40px));margin:auto}.section{padding:86px 0}.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}h1,h2,h3,p{margin-top:0}h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.04em;margin-bottom:14px}.lead{color:var(--muted);font-size:1.06rem;line-height:1.7}.btn{border:0;border-radius:12px;padding:15px 20px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:.25s}.btn-primary{background:var(--red);color:#fff;box-shadow:0 10px 24px rgba(255,45,63,.25)}.btn-primary:hover{transform:translateY(-2px);background:var(--red2)}.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6)}.btn-dark{background:#151a21;color:#fff}
+.nav{position:absolute;z-index:30;left:0;right:0;top:0}.nav-inner{height:82px;display:flex;align-items:center;gap:28px;color:#fff}.brand{font-size:1.45rem;font-weight:800;display:flex;align-items:center;gap:9px;margin-right:auto}.brand-mark{width:34px;height:24px;border-left:7px solid #fff;border-top:7px solid #fff;transform:skew(-25deg);position:relative}.brand-mark:after{content:"";position:absolute;width:17px;height:17px;border-left:6px solid #fff;border-top:6px solid #fff;left:11px;top:-6px}.brand span{color:var(--red)}.nav-links{display:flex;gap:24px;font-size:.88rem}.nav-links a{opacity:.9}.nav-links a:hover{opacity:1}.nav-actions{display:flex;gap:10px}.nav-login{background:transparent;color:#fff;border:0;font-weight:600}.mobile-toggle{display:none;background:transparent;border:0;color:#fff;font-size:1.6rem}
+.hero{min-height:690px;color:#fff;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(4,7,10,.92) 0%,rgba(4,7,10,.66) 45%,rgba(4,7,10,.28) 100%),url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1800&q=85') center 57%/cover}.hero:after{content:"";position:absolute;inset:auto 0 0;height:160px;background:linear-gradient(transparent,rgba(0,0,0,.38))}.hero-content{position:relative;z-index:2;max-width:650px;padding-top:76px}.hero h1{font-size:clamp(3.2rem,7vw,6rem);line-height:.94;letter-spacing:-.06em;margin-bottom:24px}.hero h1 span{color:var(--red)}.hero p{font-size:1.15rem;line-height:1.65;color:rgba(255,255,255,.88);max-width:610px}.hero-actions{display:flex;gap:14px;margin:28px 0 42px}.trust-row{display:flex;gap:34px;flex-wrap:wrap}.trust-item{display:flex;gap:10px;align-items:center;font-size:.82rem;color:rgba(255,255,255,.82)}.trust-item b{display:block;color:#fff;font-size:.95rem}.scribble{font-family:'Permanent Marker',cursive;position:absolute;right:8%;top:185px;font-size:1.55rem;transform:rotate(-6deg);max-width:190px;text-align:center}.scribble:after{content:"";width:90px;height:5px;background:var(--red);display:block;margin:10px auto;transform:rotate(-8deg)}
+.search-dock{position:relative;z-index:10;margin-top:-42px}.search-box{background:#fff;border-radius:20px;box-shadow:var(--shadow);padding:18px;display:grid;grid-template-columns:1.3fr 1fr auto;gap:12px}.field{border:1px solid var(--line);border-radius:12px;padding:12px 14px}.field label{display:block;font-size:.68rem;text-transform:uppercase;font-weight:800;color:#8a9098;margin-bottom:5px}.field input,.field select{border:0;outline:0;width:100%;background:transparent;color:var(--ink)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}.step{border-top:1px solid var(--line);padding-top:25px}.step-num{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#0f141a;color:#fff;font-weight:800;margin-bottom:20px}.step h3{font-size:1.15rem;margin-bottom:8px}.step p{color:var(--muted);line-height:1.6;font-size:.92rem}.phone-card{margin-top:42px;background:#111820;border-radius:28px;padding:28px;color:#fff;display:grid;grid-template-columns:1fr 1.1fr;gap:38px;overflow:hidden}.phone-copy{padding:28px}.phone-copy h3{font-size:2.25rem;letter-spacing:-.04em}.phone-copy p{color:#bdc4cd;line-height:1.7}.phone-ui{background:#0b0f14;border-radius:28px 28px 0 0;padding:20px;align-self:end;box-shadow:0 0 0 6px #242b33}.app-header{display:flex;justify-content:space-between;margin-bottom:18px}.app-search{background:#fff;color:#777;padding:13px;border-radius:12px;margin-bottom:15px}.app-services{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.app-service{background:#171d24;border:1px solid #252c34;padding:18px 8px;text-align:center;border-radius:12px;font-size:.78rem}
+.dark-section{background:#050b12;color:#fff;position:relative;overflow:hidden}.dark-section .lead{color:#c8d0d9}.service-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:38px}.service{background:linear-gradient(180deg,#141c25 0%,#101821 100%);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:30px 18px;min-height:170px;text-align:center;cursor:pointer;transition:all .25s ease;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;box-shadow:inset 0 1px 0 rgba(255,255,255,.03)}.service:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.18);box-shadow:0 14px 30px rgba(0,0,0,.22)}.service.active{border:1.5px solid var(--red);box-shadow:0 0 0 1px rgba(255,45,63,.15)}.service-icon{font-size:3.3rem;line-height:1;display:flex;align-items:center;justify-content:center;font-weight:700}.service-icon.red{color:var(--red)}.service-icon.white{color:#fff}.service strong{color:#fff;font-size:1.08rem;font-weight:800;letter-spacing:-.02em}.marker-note{font-family:'Permanent Marker',cursive;position:absolute;right:5%;bottom:28px;color:#fff;opacity:.95;transform:rotate(-6deg);font-size:1.05rem}
+.workshop-toolbar{display:flex;justify-content:space-between;align-items:end;gap:20px}.workshop-filter{display:flex;gap:9px;flex-wrap:wrap}.chip{padding:9px 13px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:.82rem}.chip.active{background:#14191f;color:#fff;border-color:#14191f}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px}.card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 22px rgba(15,19,23,.06);transition:.25s}.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(15,19,23,.12)}.card-img{height:170px;background-size:cover;background-position:center}.card-body{padding:18px}.card h3{font-size:1rem;margin-bottom:8px}.meta{color:#6f7782;font-size:.82rem;display:flex;gap:7px;margin:5px 0}.stars{color:#f4a900;font-weight:700}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:13px}.tag{font-size:.72rem;background:#f1f2f4;padding:6px 8px;border-radius:7px}.card-footer{padding:0 18px 18px}.card-footer .btn{width:100%;padding:11px 12px;font-size:.83rem}
+
+/* agregar taller */
+.partner-section{background:#fff}
+.partner-shell{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;background:linear-gradient(135deg,#0b1118 0%,#121b25 100%);border-radius:28px;padding:58px;overflow:hidden;position:relative;color:#fff}
+.partner-shell:before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:rgba(255,45,63,.09);right:-80px;top:-120px}
+.partner-copy{position:relative;z-index:2}
+.partner-copy h2{max-width:640px}
+.partner-copy .lead{color:#c8d0d9;max-width:620px}
+.partner-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0}
+.partner-benefit{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:15px;padding:18px}
+.partner-benefit-icon{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(255,45,63,.13);color:var(--red);font-weight:800;margin-bottom:12px}
+.partner-benefit strong{display:block;font-size:.9rem;margin-bottom:5px}
+.partner-benefit p{font-size:.76rem;line-height:1.5;color:#aeb8c3;margin:0}
+.partner-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-outline-light{background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff}
+.btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,.05)}
+.workshop-preview{position:relative;z-index:2;background:#fff;color:var(--ink);border-radius:22px;padding:18px;box-shadow:0 25px 55px rgba(0,0,0,.28);transform:rotate(1.5deg)}
+.workshop-preview-img{height:220px;border-radius:15px;background:linear-gradient(180deg,transparent 35%,rgba(4,7,10,.5)),url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1000&q=85') center/cover;position:relative}
+.verified-badge{position:absolute;left:15px;top:15px;background:#fff;border-radius:999px;padding:8px 11px;font-size:.72rem;font-weight:800;box-shadow:0 8px 20px rgba(0,0,0,.16)}
+.preview-body{padding:18px 5px 4px}
+.preview-head{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}
+.preview-head h3{margin-bottom:6px;font-size:1.25rem}
+.preview-rating{white-space:nowrap;color:#f4a900;font-weight:800}
+.preview-meta{font-size:.82rem;color:var(--muted);margin-bottom:12px}
+.partner-note{font-family:'Permanent Marker',cursive;position:absolute;right:40px;bottom:20px;color:rgba(255,255,255,.9);transform:rotate(-5deg);font-size:.95rem}
+.checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}
+.check-option{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:9px 10px;font-size:.82rem}
+.check-option input{width:auto}
+textarea{font:inherit;resize:vertical}
+.field textarea{border:0;outline:0;width:100%;background:transparent;color:var(--ink);min-height:78px}
+
+.benefit-wrap{border-radius:28px;padding:55px;background:linear-gradient(90deg,rgba(5,10,14,.95),rgba(5,10,14,.55)),url('https://images.unsplash.com/photo-1558981359-219d6364c9c8?auto=format&fit=crop&w=1600&q=80') center/cover;color:#fff}.benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:35px}.benefit h3{font-size:1rem}.benefit p{color:#ccd1d7;font-size:.86rem;line-height:1.6}.benefit-icon{font-size:2rem;margin-bottom:14px}
+.trust-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}.trust-points{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}.trust-point .round{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#111820;color:#fff;font-size:1.25rem;margin-bottom:13px}.trust-point strong{font-size:.9rem}.trust-point p{font-size:.78rem;color:var(--muted);line-height:1.55;margin-top:7px}.quote-card{border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:var(--shadow)}.quote-card p{font-size:1.05rem;line-height:1.7;color:#49515a}.quote-author{display:flex;gap:12px;align-items:center}.avatar{width:48px;height:48px;border-radius:50%;background:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80') center/cover}.quote-author small{color:var(--muted)}
+.final-cta{background:linear-gradient(90deg,rgba(5,8,11,.93),rgba(5,8,11,.45)),url('https://images.unsplash.com/photo-1525160354320-d8e92641c563?auto=format&fit=crop&w=1800&q=85') center/cover;color:#fff;padding:90px 0}.final-cta h2{max-width:650px}.final-cta p{max-width:560px;color:#d6d9dd}.footer{background:#080b0f;color:#aab1ba;padding:34px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-links{display:flex;gap:24px;font-size:.8rem}
+.modal{position:fixed;inset:0;background:rgba(4,7,10,.74);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}.modal.open{display:flex}.modal-card{width:min(560px,100%);background:#fff;border-radius:22px;padding:28px;box-shadow:0 30px 90px rgba(0,0,0,.35);position:relative}.modal-card h3{font-size:1.8rem;letter-spacing:-.03em;margin-bottom:8px}.modal-close{position:absolute;right:20px;top:18px;border:0;background:#f0f1f3;width:36px;height:36px;border-radius:50%;cursor:pointer}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:20px}.form-grid .field{padding:10px 12px}.full{grid-column:1/-1}.success{display:none;padding:14px;border-radius:12px;background:#edf9f1;color:#146b31;margin-top:15px;font-size:.9rem}.empty{display:none;text-align:center;padding:42px;border:1px dashed #cfd3d8;border-radius:14px;color:var(--muted);grid-column:1/-1}
+@media(max-width:920px){.partner-shell{grid-template-columns:1fr}.partner-benefits{grid-template-columns:repeat(3,1fr)}.nav-links{display:none}.mobile-toggle{display:block}.nav-actions .nav-login{display:none}.hero{min-height:650px}.scribble{display:none}.search-box{grid-template-columns:1fr}.steps-grid,.benefit-grid{grid-template-columns:repeat(2,1fr)}.service-grid{grid-template-columns:repeat(3,1fr)}.cards{grid-template-columns:repeat(2,1fr)}.phone-card,.trust-grid{grid-template-columns:1fr}.trust-points{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:620px){.partner-shell{padding:34px 22px}.partner-benefits{grid-template-columns:1fr}.workshop-preview{transform:none}.partner-actions{flex-direction:column}.partner-actions .btn{width:100%}.checkbox-grid{grid-template-columns:1fr}.container{width:min(100% - 28px,1180px)}.nav-inner{height:70px}.nav-actions .btn{display:none}.hero{min-height:700px;background-position:62% center}.hero h1{font-size:3.45rem}.hero-actions{flex-direction:column;align-items:stretch}.trust-row{gap:18px}.section{padding:65px 0}.steps-grid,.benefit-grid,.cards,.service-grid,.trust-points{grid-template-columns:1fr 1fr}.service{min-height:145px;padding:24px 14px}.service-icon{font-size:2.6rem}.service strong{font-size:1rem}.phone-card{padding:16px}.phone-copy{padding:18px}
+/* agregar taller */
+.partner-section{background:#fff}
+.partner-shell{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;background:linear-gradient(135deg,#0b1118 0%,#121b25 100%);border-radius:28px;padding:58px;overflow:hidden;position:relative;color:#fff}
+.partner-shell:before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:rgba(255,45,63,.09);right:-80px;top:-120px}
+.partner-copy{position:relative;z-index:2}
+.partner-copy h2{max-width:640px}
+.partner-copy .lead{color:#c8d0d9;max-width:620px}
+.partner-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0}
+.partner-benefit{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:15px;padding:18px}
+.partner-benefit-icon{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(255,45,63,.13);color:var(--red);font-weight:800;margin-bottom:12px}
+.partner-benefit strong{display:block;font-size:.9rem;margin-bottom:5px}
+.partner-benefit p{font-size:.76rem;line-height:1.5;color:#aeb8c3;margin:0}
+.partner-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-outline-light{background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff}
+.btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,.05)}
+.workshop-preview{position:relative;z-index:2;background:#fff;color:var(--ink);border-radius:22px;padding:18px;box-shadow:0 25px 55px rgba(0,0,0,.28);transform:rotate(1.5deg)}
+.workshop-preview-img{height:220px;border-radius:15px;background:linear-gradient(180deg,transparent 35%,rgba(4,7,10,.5)),url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1000&q=85') center/cover;position:relative}
+.verified-badge{position:absolute;left:15px;top:15px;background:#fff;border-radius:999px;padding:8px 11px;font-size:.72rem;font-weight:800;box-shadow:0 8px 20px rgba(0,0,0,.16)}
+.preview-body{padding:18px 5px 4px}
+.preview-head{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}
+.preview-head h3{margin-bottom:6px;font-size:1.25rem}
+.preview-rating{white-space:nowrap;color:#f4a900;font-weight:800}
+.preview-meta{font-size:.82rem;color:var(--muted);margin-bottom:12px}
+.partner-note{font-family:'Permanent Marker',cursive;position:absolute;right:40px;bottom:20px;color:rgba(255,255,255,.9);transform:rotate(-5deg);font-size:.95rem}
+.checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}
+.check-option{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:9px 10px;font-size:.82rem}
+.check-option input{width:auto}
+textarea{font:inherit;resize:vertical}
+.field textarea{border:0;outline:0;width:100%;background:transparent;color:var(--ink);min-height:78px}
+
+.benefit-wrap{padding:34px 24px}.workshop-toolbar{align-items:flex-start;flex-direction:column}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="container nav-inner"><a href="#inicio" class="brand"><i class="brand-mark"></i>Moto<span>Link</span></a><nav class="nav-links"><a href="#como">Cómo funciona</a><a href="#servicios">Servicios</a><a href="#talleres">Talleres</a><a href="#agregar-taller">Agregar taller</a><a href="#beneficios">Beneficios</a><a href="#confianza">Confianza</a></nav><div class="nav-actions"><button class="nav-login">Iniciar sesión</button><button class="btn btn-primary" data-open="register">Registrarse</button></div><button class="mobile-toggle" aria-label="Menú">☰</button></div></header>
+
+<section class="hero" id="inicio"><div class="container hero-content"><div class="eyebrow" style="color:#fff;opacity:.75">Talleres para motociclistas</div><h1>Tu moto.<br>Tu ruta.<br><span>Siempre lista.</span></h1><p>Encuentra talleres especializados, agenda mantenimiento y lleva el historial de tu motocicleta desde una sola plataforma.</p><div class="hero-actions"><a class="btn btn-primary" href="#talleres">⌕ Buscar taller</a><button class="btn btn-ghost" data-open="register">Registrar mi moto</button></div><div class="trust-row"><div class="trust-item">◉ <div><b>+500</b>Talleres registrados</div></div><div class="trust-item">★ <div><b>4.8/5</b>Valoración promedio</div></div><div class="trust-item">⛨ <div><b>Datos protegidos</b>Tu moto en buenas manos</div></div></div></div><div class="scribble">Más kilómetros de historias</div></section>
+
+<div class="search-dock"><div class="container"><form class="search-box" id="searchForm"><div class="field"><label>¿Qué necesita tu moto?</label><input id="searchService" placeholder="Ej. mantenimiento, llantas, diagnóstico"></div><div class="field"><label>Ubicación</label><select id="searchLocation"><option value="">Todo Costa Rica</option><option>San José</option><option>Heredia</option><option>Alajuela</option><option>Cartago</option></select></div><button class="btn btn-primary" type="submit">Buscar talleres</button></form></div></div>
+
+<section class="section" id="como"><div class="container"><span class="eyebrow">Así de simple</span><h2>Cómo funciona</h2><p class="lead">En tres pasos pasas de buscar a reservar, sin llamadas ni mensajes perdidos.</p><div class="steps-grid"><article class="step"><div class="step-num">1</div><h3>Registra tu moto</h3><p>Guarda marca, modelo, año y kilometraje para recibir recomendaciones y mantener el perfil actualizado.</p></article><article class="step"><div class="step-num">2</div><h3>Encuentra el servicio</h3><p>Filtra talleres por ubicación, especialidad y valoración. Compara opciones antes de elegir.</p></article><article class="step"><div class="step-num">3</div><h3>Reserva</h3><p>Selecciona un taller y solicita una cita. El historial del servicio queda vinculado con tu motocicleta.</p></article></div><div class="phone-card"><div class="phone-copy"><span class="eyebrow">Todo en un solo lugar</span><h3>Un perfil digital para tu moto.</h3><p>Consulta servicios, próximos mantenimientos y talleres cercanos desde una experiencia pensada para motociclistas.</p><button class="btn btn-primary" data-open="register">Crear perfil de mi moto</button></div><div class="phone-ui"><div class="app-header"><b>Moto<span style="color:var(--red)">Link</span></b><span>☰</span></div><div class="app-search">⌕ Buscar taller o servicio...</div><div class="app-services"><div class="app-service">🔧<br>Mantenimiento</div><div class="app-service">⚙️<br>Mecánica</div><div class="app-service">⚡<br>Electricidad</div></div></div></div></div></section>
+
+<section class="section dark-section" id="servicios"><div class="container"><span class="eyebrow">Especialidades</span><h2>Nuestros servicios</h2><p class="lead">Selecciona una categoría para ver talleres relacionados.</p><div class="service-grid" id="serviceGrid">
+<button class="service active" data-service=""><div class="service-icon red">✦</div><strong>Todos</strong></button>
+<button class="service" data-service="Mantenimiento"><div class="service-icon white">🔧</div><strong>Mantenimiento</strong></button>
+<button class="service" data-service="Mecánica"><div class="service-icon red">⚙</div><strong>Mecánica</strong></button>
+<button class="service" data-service="Llantas"><div class="service-icon white">◉</div><strong>Llantas</strong></button>
+<button class="service" data-service="Electricidad"><div class="service-icon red">⚡</div><strong>Electricidad</strong></button>
+<button class="service" data-service="Diagnóstico"><div class="service-icon white">▣</div><strong>Diagnóstico</strong></button>
+</div></div><div class="marker-note">Motos bien cuidadas, rutas más largas</div></section>
+
+<section class="section" id="talleres"><div class="container"><div class="workshop-toolbar"><div><span class="eyebrow">Compara antes de reservar</span><h2>Talleres destacados</h2><p class="lead">Opciones demostrativas para visualizar el flujo de MotoLink.</p></div><div class="workshop-filter"><button class="chip active" data-city="">Todos</button><button class="chip" data-city="San José">San José</button><button class="chip" data-city="Heredia">Heredia</button><button class="chip" data-city="Alajuela">Alajuela</button><button class="chip" data-city="Cartago">Cartago</button></div></div><div class="cards" id="workshopCards"></div><div class="empty" id="emptyState">No encontramos talleres con esos filtros. Prueba otra categoría o ubicación.</div></div></section>
+
+
+<section class="section partner-section" id="agregar-taller">
+  <div class="container">
+    <div class="partner-shell">
+      <div class="partner-copy">
+        <span class="eyebrow">Para talleres</span>
+        <h2>Haz que más motociclistas encuentren tu negocio.</h2>
+        <p class="lead">Registra tu taller en MotoLink, muestra tus especialidades y ubicación, y comienza a recibir solicitudes de clientes desde la misma plataforma.</p>
+
+        <div class="partner-benefits">
+          <div class="partner-benefit">
+            <div class="partner-benefit-icon">↗</div>
+            <strong>Más visibilidad</strong>
+            <p>Aparece en las búsquedas de motociclistas según ubicación y servicio.</p>
+          </div>
+          <div class="partner-benefit">
+            <div class="partner-benefit-icon">▤</div>
+            <strong>Perfil profesional</strong>
+            <p>Publica horarios, especialidades, datos de contacto y servicios.</p>
+          </div>
+          <div class="partner-benefit">
+            <div class="partner-benefit-icon">✓</div>
+            <strong>Nuevas reservas</strong>
+            <p>Recibe solicitudes de clientes interesados directamente desde MotoLink.</p>
+          </div>
+        </div>
+
+        <div class="partner-actions">
+          <button class="btn btn-primary" data-open="workshop">Registrar mi taller</button>
+          <a class="btn btn-outline-light" href="#como">Conocer cómo funciona</a>
+        </div>
+      </div>
+
+      <div class="workshop-preview">
+        <div class="workshop-preview-img">
+          <span class="verified-badge">✓ Taller verificado</span>
+        </div>
+        <div class="preview-body">
+          <div class="preview-head">
+            <div>
+              <h3>MotoCenter CR</h3>
+              <div class="preview-meta">📍 San José · Taller especializado</div>
+            </div>
+            <div class="preview-rating">★ 4.8</div>
+          </div>
+          <div class="tags">
+            <span class="tag">Mecánica</span>
+            <span class="tag">Mantenimiento</span>
+            <span class="tag">Diagnóstico</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="partner-note">Tu taller también puede ser parte de la ruta</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="beneficios"><div class="container"><div class="benefit-wrap"><span class="eyebrow">Más control, menos vueltas</span><h2>¿Por qué elegir MotoLink?</h2><div class="benefit-grid"><div class="benefit"><div class="benefit-icon">⚖</div><h3>Compara fácilmente</h3><p>Revisa ubicación, especialidad y valoración antes de decidir.</p></div><div class="benefit"><div class="benefit-icon">▣</div><h3>Reserva sin complicaciones</h3><p>Solicita tu cita desde cualquier dispositivo y recibe confirmación.</p></div><div class="benefit"><div class="benefit-icon">▤</div><h3>Historial digital</h3><p>Lleva el control de servicios y mantenimientos de tu motocicleta.</p></div><div class="benefit"><div class="benefit-icon">●</div><h3>Recordatorios</h3><p>Organiza próximos mantenimientos y evita depender de la memoria.</p></div></div></div></div></section>
+
+<section class="section" id="confianza"><div class="container trust-grid"><div><span class="eyebrow">Seguridad y transparencia</span><h2>Confianza en cada kilómetro</h2><p class="lead">La plataforma está diseñada para que la decisión se base en información clara y verificable.</p><div class="trust-points"><div class="trust-point"><div class="round">✓</div><strong>Talleres verificados</strong><p>Información comercial y especialidades visibles.</p></div><div class="trust-point"><div class="round">★</div><strong>Reseñas reales</strong><p>Opiniones asociadas a experiencias de servicio.</p></div><div class="trust-point"><div class="round">⌾</div><strong>Datos seguros</strong><p>Control sobre la información registrada de tu moto.</p></div></div></div><aside class="quote-card"><p>“Me gusta poder comparar talleres antes de escribir o llamar. Tener el historial de la moto en el mismo sitio hace que todo sea más ordenado.”</p><div class="quote-author"><div class="avatar"></div><div><strong>Luis M.</strong><br><small>Motociclista · San José</small><br><span class="stars">★★★★★</span></div></div></aside></div></section>
+
+<section class="final-cta"><div class="container"><span class="eyebrow">Sigue rodando</span><h2>Tu próxima ruta comienza aquí.</h2><p class="lead">Encuentra un taller, reserva un servicio o registra tu motocicleta para comenzar a construir su historial digital.</p><div class="hero-actions"><a class="btn btn-primary" href="#talleres">⌕ Buscar taller</a><button class="btn btn-ghost" data-open="register">Registrar mi moto</button></div></div></section>
+
+<footer class="footer"><div class="container footer-inner"><a href="#inicio" class="brand"><i class="brand-mark"></i>Moto<span>Link</span></a><div class="footer-links"><a href="#como">Cómo funciona</a><a href="#servicios">Servicios</a><a href="#talleres">Talleres</a><a href="#agregar-taller">Agregar taller</a><a href="#confianza">Confianza</a></div><small>Proyecto académico · MotoLink 2026</small></div></footer>
+
+<div class="modal" id="registerModal" aria-hidden="true"><div class="modal-card"><button class="modal-close" data-close>×</button><span class="eyebrow">Perfil de motocicleta</span><h3>Registra tu moto</h3><p class="lead">Completa los datos principales. Esta demo guarda la información únicamente durante la sesión actual.</p><form id="registerForm"><div class="form-grid"><div class="field"><label>Marca</label><input required name="brand" placeholder="Ej. Yamaha"></div><div class="field"><label>Modelo</label><input required name="model" placeholder="Ej. MT-07"></div><div class="field"><label>Año</label><input required type="number" min="1980" max="2027" name="year" placeholder="2024"></div><div class="field"><label>Kilometraje</label><input required type="number" min="0" name="km" placeholder="12500"></div><div class="field full"><label>Correo</label><input required type="email" name="email" placeholder="correo@ejemplo.com"></div><button class="btn btn-primary full" type="submit">Guardar motocicleta</button></div><div class="success" id="registerSuccess"></div></form></div></div>
+
+<div class="modal" id="workshopModal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close" data-close>×</button>
+    <span class="eyebrow">Registro para talleres</span>
+    <h3>Agrega tu taller a MotoLink</h3>
+    <p class="lead">Completa la información principal del negocio. En esta demo, la solicitud se procesa localmente y no se envía a un servidor.</p>
+
+    <form id="workshopForm">
+      <div class="form-grid">
+        <div class="field full">
+          <label>Nombre del taller</label>
+          <input required name="workshopName" placeholder="Ej. MotoCenter CR">
+        </div>
+
+        <div class="field">
+          <label>Provincia</label>
+          <select required name="province">
+            <option value="">Seleccionar</option>
+            <option>San José</option>
+            <option>Heredia</option>
+            <option>Alajuela</option>
+            <option>Cartago</option>
+            <option>Guanacaste</option>
+            <option>Puntarenas</option>
+            <option>Limón</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Teléfono</label>
+          <input required name="phone" placeholder="Ej. 8888-8888">
+        </div>
+
+        <div class="field full">
+          <label>Dirección</label>
+          <input required name="address" placeholder="Dirección o referencia del taller">
+        </div>
+
+        <div class="field full">
+          <label>Correo</label>
+          <input required type="email" name="email" placeholder="taller@ejemplo.com">
+        </div>
+
+        <div class="field full">
+          <label>Especialidades</label>
+          <div class="checkbox-grid">
+            <label class="check-option"><input type="checkbox" name="services" value="Mantenimiento"> Mantenimiento</label>
+            <label class="check-option"><input type="checkbox" name="services" value="Mecánica"> Mecánica</label>
+            <label class="check-option"><input type="checkbox" name="services" value="Llantas"> Llantas</label>
+            <label class="check-option"><input type="checkbox" name="services" value="Electricidad"> Electricidad</label>
+            <label class="check-option"><input type="checkbox" name="services" value="Diagnóstico"> Diagnóstico</label>
+            <label class="check-option"><input type="checkbox" name="services" value="Otros"> Otros servicios</label>
+          </div>
+        </div>
+
+        <div class="field full">
+          <label>Horario</label>
+          <input required name="schedule" placeholder="Ej. Lun–Sáb, 8:00 a.m. – 5:00 p.m.">
+        </div>
+
+        <div class="field full">
+          <label>Descripción breve</label>
+          <textarea name="description" placeholder="Cuéntanos qué distingue a tu taller."></textarea>
+        </div>
+
+        <button class="btn btn-primary full" type="submit">Enviar solicitud</button>
+      </div>
+      <div class="success" id="workshopSuccess"></div>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="bookingModal" aria-hidden="true"><div class="modal-card"><button class="modal-close" data-close>×</button><span class="eyebrow">Reserva</span><h3 id="bookingTitle">Reservar servicio</h3><p class="lead">Selecciona una fecha y deja tus datos para simular la solicitud de cita.</p><form id="bookingForm"><div class="form-grid"><div class="field full"><label>Servicio</label><select required name="service"><option>Mantenimiento</option><option>Mecánica</option><option>Llantas</option><option>Electricidad</option><option>Diagnóstico</option></select></div><div class="field"><label>Fecha</label><input required type="date" name="date"></div><div class="field"><label>Hora</label><input required type="time" name="time"></div><div class="field full"><label>Nombre</label><input required name="name" placeholder="Tu nombre"></div><button class="btn btn-primary full" type="submit">Solicitar cita</button></div><div class="success" id="bookingSuccess">Solicitud registrada. El taller te contactará para confirmar disponibilidad.</div></form></div></div>
+
+<script>
+const workshops=[
+{name:'MotoGarage CR',city:'San José',rating:'4.8',reviews:120,services:['Mecánica','Diagnóstico'],img:'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80'},
+{name:'Riders Workshop',city:'Heredia',rating:'4.6',reviews:98,services:['Mantenimiento','Llantas'],img:'https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&w=900&q=80'},
+{name:'Torque Moto Service',city:'Alajuela',rating:'4.7',reviews:86,services:['Mecánica','Electricidad'],img:'https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=900&q=80'},
+{name:'Ruta 360 Taller',city:'Cartago',rating:'4.5',reviews:73,services:['Mantenimiento','Diagnóstico'],img:'https://images.unsplash.com/photo-1599256871679-2b0443726e4d?auto=format&fit=crop&w=900&q=80'},
+{name:'Pitlane Moto Lab',city:'San José',rating:'4.9',reviews:151,services:['Llantas','Electricidad'],img:'https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=900&q=80'}];
+let serviceFilter='',cityFilter='',textFilter='';
+const cards=document.getElementById('workshopCards'),empty=document.getElementById('emptyState');
+function render(){const list=workshops.filter(w=>(!serviceFilter||w.services.includes(serviceFilter))&&(!cityFilter||w.city===cityFilter)&&(!textFilter||[w.name,w.city,...w.services].join(' ').toLowerCase().includes(textFilter.toLowerCase())));cards.innerHTML=list.map(w=>`<article class="card"><div class="card-img" style="background-image:url('${w.img}')"></div><div class="card-body"><h3>${w.name}</h3><div class="meta">📍 ${w.city}</div><div class="meta"><span class="stars">★ ${w.rating}</span> (${w.reviews} reseñas)</div><div class="tags">${w.services.map(s=>`<span class="tag">${s}</span>`).join('')}</div></div><div class="card-footer"><button class="btn btn-dark book" data-name="${w.name}">Ver disponibilidad</button></div></article>`).join('');empty.style.display=list.length?'none':'block';cards.style.display=list.length?'grid':'none';document.querySelectorAll('.book').forEach(b=>b.onclick=()=>openBooking(b.dataset.name));}
+render();
+document.querySelectorAll('.service').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.service').forEach(x=>x.classList.remove('active'));b.classList.add('active');serviceFilter=b.dataset.service;render();document.getElementById('talleres').scrollIntoView({behavior:'smooth'});}));
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');cityFilter=b.dataset.city;render();}));
+document.getElementById('searchForm').addEventListener('submit',e=>{e.preventDefault();textFilter=document.getElementById('searchService').value.trim();cityFilter=document.getElementById('searchLocation').value;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x.dataset.city===cityFilter));render();document.getElementById('talleres').scrollIntoView({behavior:'smooth'});});
+const reg=document.getElementById('registerModal'),book=document.getElementById('bookingModal'),workshop=document.getElementById('workshopModal');
+function show(m){m.classList.add('open');m.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}function hide(m){m.classList.remove('open');m.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+document.querySelectorAll('[data-open="register"]').forEach(b=>b.onclick=()=>show(reg));
+document.querySelectorAll('[data-open="workshop"]').forEach(b=>b.onclick=()=>show(workshop));document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>hide(b.closest('.modal')));document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)hide(m)}));
+function openBooking(name){document.getElementById('bookingTitle').textContent='Reservar en '+name;document.getElementById('bookingSuccess').style.display='none';show(book)}
+document.getElementById('registerForm').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.target);sessionStorage.setItem('motolinkMoto',JSON.stringify(Object.fromEntries(d)));const s=document.getElementById('registerSuccess');s.textContent=`${d.get('brand')} ${d.get('model')} registrada correctamente. Ya puedes empezar a organizar su mantenimiento.`;s.style.display='block';e.target.querySelector('button[type=submit]').textContent='Moto registrada ✓';});
+document.getElementById('bookingForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('bookingSuccess').style.display='block';});
+document.getElementById('workshopForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const d=new FormData(e.target);
+  const selected=d.getAll('services');
+  const payload=Object.fromEntries(d.entries());
+  payload.services=selected;
+  sessionStorage.setItem('motolinkWorkshop',JSON.stringify(payload));
+  const s=document.getElementById('workshopSuccess');
+  s.textContent=`Solicitud de ${d.get('workshopName')} registrada correctamente. MotoLink revisará la información antes de publicar el perfil.`;
+  s.style.display='block';
+  e.target.querySelector('button[type=submit]').textContent='Solicitud enviada ✓';
+});
+document.querySelector('.mobile-toggle').addEventListener('click',()=>alert('En móvil puedes desplazarte por la página o usar los botones principales para continuar.'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){hide(reg);hide(book);hide(workshop)}});
+</script>
+</body>
+</html>
